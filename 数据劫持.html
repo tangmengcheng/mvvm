@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let obj = {}
+    Object.defineProperty(obj, 'school', {
+      configurable: true,
+      // writable: true,
+      enumerable: true,
+      // value: 'tmc',
+      get() {
+        return 'mingming'
+      },
+      set(val) {
+        console.log(val)
+      }
+    })
+    // obj.school = 'mm'
+    for(let key in obj) {
+      console.log(key)
+    }
+  </script>
+</body>
+</html>
